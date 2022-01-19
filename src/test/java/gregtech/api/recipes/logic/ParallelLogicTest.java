@@ -1,6 +1,7 @@
 package gregtech.api.recipes.logic;
 
 import gregtech.api.GTValues;
+import gregtech.api.fluids.MetaFluids;
 import gregtech.api.recipes.Recipe;
 import gregtech.api.recipes.RecipeMap;
 import gregtech.api.recipes.builders.BlastRecipeBuilder;
@@ -8,7 +9,6 @@ import gregtech.api.unification.material.Materials;
 import gregtech.api.util.GTHashMaps;
 import gregtech.api.util.OverlayedFluidHandler;
 import gregtech.api.util.OverlayedItemHandler;
-import gregtech.common.MetaFluids;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityFluidHatch;
 import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityItemBus;
 import net.minecraft.init.Blocks;
