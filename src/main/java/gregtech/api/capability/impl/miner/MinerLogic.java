@@ -354,7 +354,6 @@ public class MinerLogic {
 
     /**
      * Applies a fortune hammer to block drops based on a tier value, intended for small ores
-     * @param random the random chance component for recipe ChancedOutputs
      * @param blockState the block being mined
      * @param drops where the drops are stored to
      * @param fortuneLevel the level of fortune used
@@ -366,7 +365,7 @@ public class MinerLogic {
         Recipe recipe = map.findRecipe(Long.MAX_VALUE, Collections.singletonList(itemStack), Collections.emptyList(), 0, MatchingMode.IGNORE_FLUIDS);
         if (recipe != null && !recipe.getOutputs().isEmpty()) {
             drops.clear();
-            for (ItemStack outputStack : recipe.getResultItemOutputs(Integer.MAX_VALUE, tier, map)) {
+            for (ItemStack outputStack : recipe.getResultItemOutputs(tier, map)) {
                 outputStack = outputStack.copy();
                 if (OreDictUnifier.getPrefix(outputStack) == OrePrefix.crushed) {
                     if (fortuneLevel > 0) {

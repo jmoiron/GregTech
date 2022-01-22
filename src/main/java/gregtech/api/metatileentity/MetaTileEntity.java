@@ -65,7 +65,7 @@ import java.util.function.Consumer;
 
 import static gregtech.api.capability.GregtechDataCodes.*;
 
-public abstract class MetaTileEntity implements ICoverable {
+public abstract class MetaTileEntity implements ICoverable, IVoidable {
 
     public static final IndexedCuboid6 FULL_CUBE_COLLISION = new IndexedCuboid6(null, Cuboid6.full);
     public static final String TAG_KEY_PAINTING_COLOR = "PaintingColor";
@@ -1375,5 +1375,15 @@ public abstract class MetaTileEntity implements ICoverable {
 
     public boolean doTickProfileMessage() {
         return true;
+    }
+
+    @Override
+    public boolean canVoidRecipeItemOutputs() {
+        return false;
+    }
+
+    @Override
+    public boolean canVoidRecipeFluidOutputs() {
+        return false;
     }
 }

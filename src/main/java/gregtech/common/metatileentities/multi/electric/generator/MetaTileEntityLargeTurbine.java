@@ -205,7 +205,12 @@ public class MetaTileEntityLargeTurbine extends FuelMultiblockController impleme
     }
 
     @Override
-    public boolean canVoidRecipeOutputs() {
+    public boolean canVoidRecipeItemOutputs() {
+        return true;
+    }
+
+    @Override
+    public boolean canVoidRecipeFluidOutputs() {
         return true;
     }
 }
